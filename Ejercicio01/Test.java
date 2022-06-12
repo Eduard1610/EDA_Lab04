@@ -25,11 +25,11 @@ public class Test {
 
 		ArrayList<LinkedList<Integer>> casos = new ArrayList<LinkedList<Integer>>();
 		Scanner sc = new Scanner( System.in );
-	    System.out.print( "Introduzca el tamaño máximo del último arreglo: " );
-	    int tamano = sc.nextInt();
+	    	System.out.print( "Introduzca el tamaño máximo del último arreglo: " );
+	    	int tamano = sc.nextInt();
 	    
-	    for(int n = 1; n <= tamano; n++) 
-	    	casos.add(generarPeorCaso(n));
+	    	for(int n = 1; n <= tamano; n++) 
+	    		casos.add(generarPeorCaso(n));
 	    
 		for(LinkedList<Integer> caso: casos) 
 			System.out.println(caso);
