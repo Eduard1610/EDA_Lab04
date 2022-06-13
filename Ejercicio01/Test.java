@@ -1,29 +1,23 @@
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
-public class Test {
-	public static void main(String[] args) {
-		LinkedList<Integer> lint = new LinkedList<Integer>();
 
-		// // LLENANDO LA LISTA
-		// lint.insertFirst(10);
-		// System.out.println(lint);
-		// lint.insertFirst(14);
-		// System.out.println(lint);
-		// lint.insertFirst(7);
-		// System.out.println(lint);
-		// lint.insertFirst(23);
-		// System.out.println(lint);
-		// lint.insertFirst(18);
-		// System.out.println(lint);
-		// lint.insertFirst(6);
-		// System.out.println(lint);
-		// lint.insertFirst(19);
-		// System.out.println(lint);
-		// lint.insertFirst(25);
-		// System.out.println(lint);
+import com.panayotis.gnuplot.JavaPlot;
+
+public class Test {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
 
 		ArrayList<LinkedList<Integer>> casos = new ArrayList<LinkedList<Integer>>();
+		String archivo1 = "insertionsort.txt";
+	    PrintWriter oS = new PrintWriter(archivo1); 
 		Scanner sc = new Scanner( System.in );
 	    	System.out.print( "Introduzca el tamaño máximo del último arreglo: " );
 	    	int tamano = sc.nextInt();
@@ -31,9 +25,21 @@ public class Test {
 	    	for(int n = 1; n <= tamano; n++) 
 	    		casos.add(generarPeorCaso(n));
 	    
-		for(LinkedList<Integer> caso: casos) 
-			System.out.println(caso);
+	    	Iterator<LinkedList<Integer>> lista = casos.iterator();
+		    
+		    while(lista.hasNext()){      	
+		    	oS.println(String.valueOf(LinkedList.insertionSort(lista.next())));        	
+		    }
+		    
+		    oS.close();
+		    JavaPlot p = new JavaPlot();
+			p.addPlot("\"C:/Users/Home/eclipse-workspace/Ejercicio01/insertionsort.txt\" with lines");
+			p.plot();
+			
+		
 	}
+	
+	
 	
 	public static LinkedList<Integer> generarPeorCaso(int t) {
 		LinkedList<Integer> list = new LinkedList<Integer>();
@@ -42,4 +48,6 @@ public class Test {
 		}
 		return list;
 	}
+
+
 }
