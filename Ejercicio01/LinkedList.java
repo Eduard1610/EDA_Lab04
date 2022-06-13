@@ -1,14 +1,15 @@
-public class LinkedList<E> {
+public class LinkedList<E extends Comparable<E>> {
 	private Node<E> first;
+	public int tamano;
 
 	public LinkedList() {
-
+		tamano = 0;
 	}
 
 	public boolean isEmpty() {
 		return this.first == null;
 	}
-	
+
 	public int length() {
 		int count = 0;
 		Node<E> aux = this.first;
@@ -16,16 +17,17 @@ public class LinkedList<E> {
 			count++;
 		return count;
 	}
-	
+
 	public Node<E> get(int index) {
 		int count = 0;
 		Node<E> aux = this.first;
-		while(count != index) {
+		while (count != index) {
 			aux = aux.getNext();
 			count++;
 		}
 		return aux;
 	}
+
 	public void insertFirst(E x) {
 		// 2 MANERAS
 
@@ -36,17 +38,22 @@ public class LinkedList<E> {
 
 		// ( 2 )
 		this.first = new Node<E>(x, this.first);
+		tamano++;
 	}
 
 	public void insertLast(E x) {
+		
 		if (isEmpty())
 			insertFirst(x);
 		else {
 			Node<E> aux = this.first;
 			// Cuando encontremos un nodo que tenga un next Nulo
-			for (; aux.getNext() != null; aux = aux.getNext());// Omitimos la inicializaci�n (est� arriba) por eso ";"
+			for (; aux.getNext() != null; aux = aux.getNext())
+				;// Omitimos la inicializaci�n (est� arriba) por eso ";"
 			aux.setNext(new Node<E>(x));
+			
 		}
+		tamano++;
 
 	}
 
@@ -78,8 +85,8 @@ public class LinkedList<E> {
 			}
 		}
 	}
-	
-	// Como no hay posici�n inferimos 
+
+	// Como no hay posici�n inferimos
 	public void insert(E x, int p) { // Para un p mayor a el n�mero de elementos
 		int index = 0;
 		Node<E> aux = this.first;
@@ -90,13 +97,32 @@ public class LinkedList<E> {
 		else {
 			while (aux.getNext() != null && index != (p - 1)) {
 				aux = aux.getNext();
-				index++; // index de mi aux	
+				index++; // index de mi aux
 			}
 		}
 		// Enlazamos el nuevo nodo con el siguiente de aux
 		newNode.setNext(aux.getNext());
 		// Enlazamos el nodo anterior a �ndice p con newNode
-		aux.setNext(newNode);	
+		aux.setNext(newNode);
+	}
+
+	public long insertionSort() {
+		Node<E> key;
+		int i;
+		long nano_startTime = System.nanoTime();
+		for (int j = 1; j < 8; j = j + 1) {
+			key = this.get(j);
+			i = j - 1;
+			while (i > -1 && this.get(i).getData().compareTo(key.getData()) > 0) {
+				//this.get(i+1).setNext(this.get(i));
+				//insert(this.get(i).getData(),(i+1));
+				i=i-1;
+				
+			}	
+			this.get(i+1).setNext(key);
+		}
+		long nano_endTime = System.nanoTime();
+		return nano_endTime - nano_startTime;
 	}
 
 	public String toString() {
