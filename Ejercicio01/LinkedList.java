@@ -1,6 +1,6 @@
-public class LinkedList<E extends Comparable<E>> {
+public class LinkedList<E> {
 	private Node<E> first;
-	public int tamano;
+	public static int tamano;
 
 	public LinkedList() {
 		tamano = 0;
@@ -106,20 +106,20 @@ public class LinkedList<E extends Comparable<E>> {
 		aux.setNext(newNode);
 	}
 
-	public long insertionSort() {
-		Node<E> key;
+	public static long insertionSort(LinkedList<Integer> x) {
+		int key;
 		int i;
 		long nano_startTime = System.nanoTime();
-		for (int j = 1; j < 8; j = j + 1) {
-			key = this.get(j);
+		for (int j = 1; j < tamano; j = j + 1) {
+			key = x.get(j).getData();
 			i = j - 1;
-			while (i > -1 && this.get(i).getData().compareTo(key.getData()) > 0) {
+			while (i > -1 && x.get(i).getData()>key) {
 				//this.get(i+1).setNext(this.get(i));
 				//insert(this.get(i).getData(),(i+1));
-				i=i-1;
-				
+				x.insert(x.get(i).getData(),i+1);
+				i--;
 			}	
-			this.get(i+1).setNext(key);
+			x.insert(key,i+1);
 		}
 		long nano_endTime = System.nanoTime();
 		return nano_endTime - nano_startTime;
