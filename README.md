@@ -39,9 +39,9 @@
 <tr><td colspan="6">INTEGRANTES:
     <ul>
         <li>Durand Obando, Eduardo Franshua</li>
-        <li>Integrante2</li>
-        <li>Integrante3</li>
-        <li>Integrante4</li>
+        <li>Galvez Quilla, Henry Isaias</li>
+        <li>Alvarez Astete, Kevin Jheeremy</li>
+        <li>Centeno Quispe, Marco Edmundo E.</li>
     </ul>
 </td>
 </<tr>
