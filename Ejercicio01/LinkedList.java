@@ -38,7 +38,7 @@ public class LinkedList<E> {
 
 		// ( 2 )
 		this.first = new Node<E>(x, this.first);
-		tamano++;
+		
 	}
 
 	public void insertLast(E x) {
