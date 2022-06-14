@@ -117,61 +117,62 @@
             }
         }
         ```
-    ### **DESARROLLO**
-        Este ejercicio se encuentra dentro de la la carpeta "Ejercicio01" dentro encontramos 3 archivos:
-        - Node: La clase de cada elemento de nuestra lista enlazada.
-        - LinkedList: La clase de nuestra lista enlazada.
-        - Test: Aquí se prueba el ejercicio.
+### **DESARROLLO**
+Este ejercicio se encuentra dentro de la la carpeta "Ejercicio01" dentro encontramos 3 archivos:
+    - Node: La clase de cada elemento de nuestra lista enlazada.
+    - LinkedList: La clase de nuestra lista enlazada.
+    - Test: Aquí se prueba el ejercicio.
 
-        Dentro de Test está el método generarPeorCaso(int t), que como su nombre menciona tiene el objetivo de crearnos el peor caso de ordenamiento, para este caso de números enteros.
+Dentro de Test está el método generarPeorCaso(int t), que como su nombre menciona tiene el objetivo de crearnos el peor caso de ordenamiento, para este caso de números enteros.
 
-        El peor caso es aquel que está en orden inverso al que se busca:
-        - Ordenado: 1 - 2 - 3 - 4
-        - Peor Caso: 4 - 3 - 2 - 1
-        
-        Después hicimos el método de insertSort donde basicamente seguimos el pseudocodigo pero adaptandolo a las listas enlazadas donde utilizamos un key que nos serviras de variable auxiliar.
-        Lo que hacemos es recorrer entre nodos y comparandolos siempre que estos no sean nulos intercambiamos valor con el key si es que el otro valor es mayor.
-        
-        Despues implementamos la funcion de nanotime para calcular el tiempo de ejecucion del algoritmo para una lista enlazada de n elementos
-        
-        En el test.java usamos el gnu plot para visualizar el tiempo utilizado para el ordenamiento en el peor caso
-        
-    #
-    <img src="https://github.com/Eduard1610/EDA_Lab04/blob/main/gnuplot.jpg?raw=true" alt="Ejer01" style="width:100%; margin: auto; display: block;"/>
+El peor caso es aquel que está en orden inverso al que se busca:
+    - Ordenado: 1 - 2 - 3 - 4
+    - Peor Caso: 4 - 3 - 2 - 1
+
+Después hicimos el método de insertSort donde basicamente seguimos el pseudocodigo pero adaptandolo a las listas enlazadas donde utilizamos un key que nos serviras de variable auxiliar.
+Lo que hacemos es recorrer entre nodos y comparandolos siempre que estos no sean nulos intercambiamos valor con el key si es que el otro valor es mayor.
+
+Despues implementamos la funcion de nanotime para calcular el tiempo de ejecucion del algoritmo para una lista enlazada de n elementos
+
+En el test.java usamos el gnu plot para visualizar el tiempo utilizado para el ordenamiento en el peor caso    
+#
+<img src="https://github.com/Eduard1610/EDA_Lab04/blob/main/gnuplot.jpg?raw=true" alt="Ejer01" style="width:100%; margin: auto; display: block;"/>
+
 2.  Utilizar el tipo generico de Doble Lista Enlazada para generar los peores casos y ejecutar el algoritmo de ordenamiento.
-    ```sh
-    public class Node <E > {
-        Node () {
-            this . data = null ;
-            this . nextNode = null ;
-            this . previousNode = null ;
-        }
 
-        Node ( E data ) {
-            this . data = data ;
-            this . nextNode = null ;
-            this . previousNode = null ;
-        }
-
-        Node ( E data , Node <E > nextNode ) {
-            this . data = data ;
-            this . nextNode = nextNode ;
-            this . previousNode = null ;
-        }
-
-        Node ( E data , Node <E > nextNode , Node <E > previousNode ) {
-            this . data = data ;
-            this . nextNode = nextNode ;
-            this . previousNode = previousNode ;
-        }
-
-        private E data ;
-        private Node <E > nextNode ;
-        private Node <E > previousNode ;
-
-        /* Getters y Setter ... */
+```sh
+public class Node <E > {
+    Node () {
+        this . data = null ;
+        this . nextNode = null ;
+        this . previousNode = null ;
     }
-    ```
+
+    Node ( E data ) {
+        this . data = data ;
+        this . nextNode = null ;
+        this . previousNode = null ;
+    }
+
+    Node ( E data , Node <E > nextNode ) {
+        this . data = data ;
+        this . nextNode = nextNode ;
+        this . previousNode = null ;
+    }
+
+    Node ( E data , Node <E > nextNode , Node <E > previousNode ) {
+        this . data = data ;
+        this . nextNode = nextNode ;
+        this . previousNode = previousNode ;
+    }
+
+    private E data ;
+    private Node <E > nextNode ;
+    private Node <E > previousNode ;
+
+    /* Getters y Setter ... */
+}
+```
 
 ### **DESARROLLO**
 
@@ -201,15 +202,15 @@ El peor caso es aquel que está en orden inverso al que se busca:
     ![ADD-EXTERNAL-JARs](imagenes/Add_External_JARs.png)
     ¿Cómo lo haría desde la terminal?
     
-    -Para ejecutarlo directamente en la terminal sin necesidad de un IDE como Eclipse primeramente tenemos que ubicarnos en la carpeta donde se encuentra nuestro proyecto y el ejecutable .java creamos un archivo objeto con el comando de
-    javac -cp (Carpeta del javaplot)/dist/JavaPlot.jar ejecutable.java
-    -Lo que hará será compilar con el javac y para ejecutar el programa es colocar el mismo comando reemplazando el javac solamente por java
+    - Para ejecutarlo directamente en la terminal sin necesidad de un IDE como Eclipse primeramente tenemos que ubicarnos en la carpeta donde se encuentra nuestro proyecto y el ejecutable .java creamos un archivo objeto con el comando de javac -cp (Carpeta del javaplot)/dist/JavaPlot.jar ejecutable.java
+    - Lo que hará será compilar con el javac y para ejecutar el programa es colocar el mismo comando reemplazando el javac solamente por java
 
 ## REFERENCIAS
-    - https://www.w3schools.com/java/
-    - https://www.eclipse.org/downloads/packages/release/2022-03/r/eclipse-ide-enterprise-java-and-web-developers
-    -   https://javaplot.panayotis.com/
-    -   https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.3/
+
+- https://www.w3schools.com/java/
+- https://www.eclipse.org/downloads/packages/release/2022-03/r/eclipse-ide-enterprise-java-and-web-developers
+- https://javaplot.panayotis.com/
+- https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.3/
 
 #
 
