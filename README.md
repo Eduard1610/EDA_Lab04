@@ -173,24 +173,27 @@
     }
     ```
 
-    ### **DESARROLLO**
-        Este ejercicio se encuentra dentro de la la carpeta "Ejercicio02" dentro encontramos 3 archivos:
-        - Node: La clase de cada elemento de la lista enlazadas dobles.
-        - DoubleLinkedList: La clase de las listas enlazadas dobles con las siguiente funciones:
-          - **add:** Añade un nodo a la lista doble.
-          - **get:** Devuelve el nodo en el indice dado.
-          - **remove:** Elimina el nodo en el indice dado.
-          - **insertionSort:** Ordena la lista doble devolviendo el tiempo de ejecucion.
-          - **isEmpty:** Verifica si la lista esta vacio.
-          - **toString:** Imprime los elementos de la lista
+### **DESARROLLO**
 
-        - Test: Aquí se prueba el ejercicio.
+Este ejercicio se encuentra dentro de la la carpeta "Ejercicio02" dentro encontramos 3 archivos:
+- Node: La clase de cada elemento de la lista enlazadas dobles.
+- DoubleLinkedList: La clase de las listas enlazadas dobles con las siguiente funciones:
+    - **add:** Añade un nodo a la lista doble.
+    - **get:** Devuelve el nodo en el indice dado.
+    - **remove:** Elimina el nodo en el indice dado.
+    - **insertionSort:** Ordena la lista doble devolviendo el tiempo de ejecucion.
+    - **isEmpty:** Verifica si la lista esta vacio.
+    - **toString:** Imprime los elementos de la lista
 
-        Dentro de Test está el método generarPeorCaso(int t), que como su nombre menciona tiene el objetivo de crearnos el peor caso de ordenamiento, para este caso de números enteros.
-
-        El peor caso es aquel que está en orden inverso al que se busca:
-        - Ordenado: 1 - 2 - 3 - 4
-        - Peor Caso: 4 - 3 - 2 - 1
+ - Test: Aquí se prueba el ejercicio.
+        
+ - Dentro de Test está el método generarPeorCaso(int t), que como su nombre menciona tiene el objetivo de crearnos el peor caso de ordenamiento, para este caso de números enteros.
+El peor caso es aquel que está en orden inverso al que se busca:
+    - Ordenado: 1 - 2 - 3 - 4
+    - Peor Caso: 4 - 3 - 2 - 1
+ 
+### **PLOTEO PARA N = 1000**
+<img src="./gnuplotListaEnlazadaDoble.jpeg">
 
 ## CUESTIONARIO
 -   ¿Cómo se ejecutaría sus implementaciones desde terminal(consola)?
