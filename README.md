@@ -197,6 +197,10 @@
     Por ejemplo en el IDE Eclipse se agrega un jar externo así:
     ![ADD-EXTERNAL-JARs](imagenes/Add_External_JARs.png)
     ¿Cómo lo haría desde la terminal?
+    
+    -Para ejecutarlo directamente en la terminal sin necesidad de un IDE como Eclipse primeramente tenemos que ubicarnos en la carpeta donde se encuentra nuestro proyecto y el ejecutable .java creamos un archivo objeto con el comando de
+    javac -cp (Carpeta del javaplot)/dist/JavaPlot.jar ejecutable.java
+    -Lo que hará será compilar con el javac y para ejecutar el programa es colocar el mismo comando reemplazando el javac solamente por java
 
 ## REFERENCIAS
     - https://www.w3schools.com/java/
