@@ -119,15 +119,16 @@
         ```
 ### **DESARROLLO**
 Este ejercicio se encuentra dentro de la la carpeta "Ejercicio01" dentro encontramos 3 archivos:
-    - Node: La clase de cada elemento de nuestra lista enlazada.
-    - LinkedList: La clase de nuestra lista enlazada.
-    - Test: Aquí se prueba el ejercicio.
+
+- Node: La clase de cada elemento de nuestra lista enlazada.
+- LinkedList: La clase de nuestra lista enlazada.
+- Test: Aquí se prueba el ejercicio.
 
 Dentro de Test está el método generarPeorCaso(int t), que como su nombre menciona tiene el objetivo de crearnos el peor caso de ordenamiento, para este caso de números enteros.
 
 El peor caso es aquel que está en orden inverso al que se busca:
-    - Ordenado: 1 - 2 - 3 - 4
-    - Peor Caso: 4 - 3 - 2 - 1
+- Ordenado: 1 - 2 - 3 - 4
+- Peor Caso: 4 - 3 - 2 - 1
 
 Después hicimos el método de insertSort donde basicamente seguimos el pseudocodigo pero adaptandolo a las listas enlazadas donde utilizamos un key que nos serviras de variable auxiliar.
 Lo que hacemos es recorrer entre nodos y comparandolos siempre que estos no sean nulos intercambiamos valor con el key si es que el otro valor es mayor.
